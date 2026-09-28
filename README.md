@@ -1,8 +1,20 @@
-# Botany Identifier
+# Event Identifier
 
-A single-page Science Olympiad Botany practice tool. It shows a specimen image, you type what it is, and it shows the plant group, monocot/dicot, leaf venation, root system, floral pattern, and key ID features. It tracks score and streak, and offers "retry missed" at the end of a round.
+Science Olympiad identification practice with two subjects, switched with the tabs at the top:
 
-Specimens are in `src/data/plants.js`. Images come from Wikimedia Commons, with credits in `src/data/plantImages.js`.
+- **Botany – Identification Practice.** 101 plants, organs, cross-sections, and diseases. After each answer you see the plant group, monocot/dicot, venation, root system, floral pattern, and key features.
+- **Rocks & Minerals – Identification Practice.** Every specimen on the 2027 national list (50 minerals + 24 rocks). After each answer you see the classification, composition, color, luster, hardness, streak, crystal form/texture, the key identifying property, and one detail to remember.
+
+For each specimen you see an image, type what it is (small typos are OK), then study the answer card. The app tracks score and streak, and offers "retry missed" at the end of a round. Stats are saved in each person's browser.
+
+Live site: https://coder-st.github.io/event_identifier/ (`#rocks` opens the Rocks & Minerals tab directly).
+
+## Data
+
+- Botany: `src/data/plants.js` (images and credits in `src/data/plantImages.js`)
+- Rocks & minerals: `src/data/rocks.js` (images and credits in `src/data/rockImages.js`)
+
+All images are CC-licensed or public-domain files from Wikimedia Commons, and each shows its author and license.
 
 ## Develop
 
@@ -11,6 +23,6 @@ npm install
 npm run dev   # http://localhost:5180
 ```
 
-## Deploy to GitHub Pages
+## Deploy
 
-Push to `main`, then go to repo **Settings → Pages → Source** and choose **GitHub Actions**. The workflow in `.github/workflows/deploy.yml` builds and publishes the site to `https://<user>.github.io/<repo>/`.
+Every push to `main` builds and publishes to GitHub Pages through `.github/workflows/deploy.yml`.
